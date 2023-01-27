@@ -7,18 +7,52 @@ public class Running : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
-    
 
+    // Patroling
+    public Vector3 walkPoint;
+    bool walkPointSet;
+    public float walkPointRange;
 
-    // Start is called before the first frame update
-    void Start()
+    //Attacking
+    public float timeBetweenAttacks;
+    bool alreadyAttacked;
+
+    //States
+    bool chasePlayerTrigger;
+
+    private void Awake()
     {
+        player = GameObject.Find("PlayerObj").transform;
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    private void Update()
+    {
+        ChasePlayer();
+    }
+
+    private void Patroling()
+    {
+        if (walkPointSet) Update();
+    }
+
+    private void ChasePlayer()
+    {
+        // make sure enemy doesn't move
+        agent.isStopped = false;
+        agent.SetDestination(player.position);
+        transform.LookAt(player);
+    }
+
+    private void ResetAttack(){
+
+    }
+
+    private void AttackPlayer(){
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void StopEnemy(){
+    
     }
 }
