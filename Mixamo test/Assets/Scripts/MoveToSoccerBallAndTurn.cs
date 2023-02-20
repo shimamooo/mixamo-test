@@ -8,10 +8,12 @@ public class MoveToSoccerBallAndTurn : MonoBehaviour
     public float speed;
     public Transform target;
     public Rig animationRigging;
+    public Animator myAnim;
 
     private void Start()
     {
         transform.LookAt(target);
+        myAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,5 +30,12 @@ public class MoveToSoccerBallAndTurn : MonoBehaviour
     void TurnAround()
     {
         animationRigging.weight = 1;
+    }
+
+    void OnTriggerEnter(Collider other){
+        if (other.GetComponent<Collider>().gameObject.tag == "ball")
+        {
+            myAnim.SetTrigger("PassBallTri");
+        }
     }
 }
