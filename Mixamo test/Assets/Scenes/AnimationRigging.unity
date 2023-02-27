@@ -514,6 +514,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1263005994}
+    - target: {fileID: 8756062173003182417, guid: 0d895283ccfbc49f2a8115289a1c9ae6, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 2860941d688664da0a6f31b6dc944b6d, type: 3}
+    - target: {fileID: 8756062173003182417, guid: 0d895283ccfbc49f2a8115289a1c9ae6, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig5:Hips'\n\tTransform 'mixamorig5:Spine'\n\tTransform
+        'mixamorig5:RightHandRing3'\n\tTransform 'mixamorig5:RightHandIndex1'\n\tTransform
+        'mixamorig5:LeftHandRing2'\n\tTransform 'mixamorig5:LeftLeg'\n\tTransform
+        'mixamorig5:LeftToeBase'\n\tTransform 'mixamorig5:LeftHand'\n\tTransform
+        'mixamorig5:LeftHandIndex1'\n\tTransform 'mixamorig5:RightFoot'\n\tand more
+        ...\n\tFrom animation clip 'Soccer Pass (1)'"
+      objectReference: {fileID: 0}
     - target: {fileID: 8756062173003182420, guid: 0d895283ccfbc49f2a8115289a1c9ae6, type: 3}
       propertyPath: m_RootOrder
       value: 2
